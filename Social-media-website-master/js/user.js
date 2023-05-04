@@ -1,0 +1,1 @@
+let usercardcontainer = document.querySelector('.suggestions')

@@ -1,0 +1,282 @@
+:root{
+    --border-radius: 2rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 2rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+    --color-white: hsl(252, 30%, 100%);
+    --color-gray: hsl(252, 15%, 65%);
+    --color-light:hsl(252, 30%, 90%);
+    --color-dark: hsl(252, 30%, 17%);
+    --color-primary: hsl(252, 75%, 60%);
+    --color-success: hsl(120, 95%, 60%);
+    --color-danger: hsl(0, 95%, 65%);
+    --color-black: hsl(252, 30%, 10%);
+    --sticky-top-left: 5.4rem;
+    --sticky-top-right: -18rem;
+    }
+
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+
+body{
+    width: 100%;
+    color: var(--color-dark);
+    position: relative;
+    background: var(--color-light);
+    
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.profile-pic{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: start;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+.text-bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-gray)
+}
+
+nav{
+    width: 100%;
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: white;
+    
+    
+
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar{
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--seacrh-padding);
+    
+}
+.search-bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+}
+
+nav .search-bar input[type="search"]::placeholder{
+    color: var(--color-gray);
+    
+}
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+p{
+    padding-top: 10px;
+}
+
+.user-info{
+    display: inline-flex;
+    margin-top: 100px;
+    width: 100%;
+    align-items: center;
+    gap:50px ;
+}
+.info-com{
+    display:inline-block;
+}
+
+.user-dp{
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    
+
+}
+
+.number-card{
+    font-size: 2rem;
+    line-height: 1rem;
+    margin-right: 30px;
+}
+
+.number-card span{
+    font-size: 1rem;
+    text-align: center;
+    margin-top:30px ;
+    text-transform: capitalize;
+    display: block;
+}
+
+.btn-container{
+    margin-left: 120px;
+    margin-top: 20px;
+    gap: 30px;
+    display: flex;
+    
+}
+
+.btn-container .btn{
+    width: 200px;
+    margin: 0;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.btn-edit , .btn-logout {
+    margin-left: 30px;
+    background: var(--color-white) ;
+    border: 1px solid var(--color-gray);
+}
+
+.profiles-containers{
+    margin: 40px 0;
+    width:100%;
+    
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1px;
+    padding: 34px 131px 0px 162px;
+    justify-content: space-around;
+
+}
+
+.profiles-containers .mypost{
+    justify-content: space-around;
+    
+    width: 180px;
+    border: none;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 0;
+    position:relative;
+    padding: 0;
+    margin-bottom: 27px;
+}
+.profiles-containers .mypost .post-img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+    
+}
+
+.profiles-containers .like{
+    z-index: 2;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background:rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.profiles-containers .mypost:hover .like{
+    opacity: 1;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+
+.like .like-count{
+    color: #fff;
+}
+
+.suggestion-slider{
+    width: 100%;
+    position: relative;
+    
+}
+
+.text-muted{
+    text-align: center;
+}
+
+.follow-btn{
+    text-align: center;
+}
+.user-card{
+    background-color: var(--color-white);
+    border-radius: 10px;
+    
+    padding: 6px 34px 209px 37px;
+    margin: 26px 33px 38px 26px;
+
+
+    
+    
+    
+}
+
+.follow-btn{
+    background-color:rgb(145, 145, 247);
+    border-radius: 10px;
+    
+}
+
+.users-card{
+    background-color: var(--color-white);
+    border-radius: 10px;
+
+    padding: 25px 34px 77px 37px;
+    margin: 29px 39px -9px 36px;
+
+}
+
+
